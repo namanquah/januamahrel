@@ -17,4 +17,7 @@
       N Amanquah
   </author>
 
+   <icon src="icon.png" />
+    <splash src="splash.png" />
+
 </widget>
