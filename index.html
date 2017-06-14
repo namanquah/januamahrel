@@ -10,8 +10,7 @@
 
     <script src="./jqm/jquery-1.12.4.min.js"></script>
     <script src="./jqm/jquery.mobile-1.4.5.min.js"></script>
-
-
+    
 
 
 
@@ -20,30 +19,30 @@
     <div data-role="page" id= "home">
  
         <div data-role="header">
-            <h1>Faculty Dev Seminar</h1>
+            <h1>Data Collection</h1>
         </div><!-- /header -->
  
         <div role="main" class="ui-content">
-            <p>Program for Faculty Dev Seminar, May- June 2017</p>
-            <a href="#program" data-role="button" data-transition="slide">Program</a>
+            <p>Weekly Data Collection</p>
+            <a href="#submitdata" data-role="button" data-transition="slide">Submit Data</a>
             <a href="#settings" data-role="button" data-transition="slide">Settings</a>
-            <a href="#checkin" data-role="button" data-transition="slide">Check in</a>
+            <a href="#refresh" data-role="button" data-transition="slide">Upload/Sync Data</a>
             <a href="#about" data-role="button" data-transition="slide">About</a>
         </div><!-- /content -->
  
         <div data-role="footer">
-            <h4> 30/May - 01/Jun </h4>
+            <h4> Touch a button </h4>
         </div><!-- /footer -->
  
     </div><!-- /page -->
 
 <!--------------------------- -->
-    <div data-role="page" id= "program">
+    <div data-role="page" id= "submitdata">
  
         <div data-role="header">
 
           <a href="#home" data-role="button"  data-icon="home">Home</a>
-            <h1>Choose a day</h1>
+            <h1>Make your selection</h1>
         <!--  <a href="#" data-role="button">Search</a>     -->
 
 
@@ -51,20 +50,35 @@
         </div><!-- /header -->
  
         <div role="main" class="ui-content">
-            <p>Choose a day</p>
-            <div data-role="controlgroup" data-type="vertical">
-                <p>View program for:</p>
-                <a href="#tues" data-role="button">Tuesday</a>
-                <a href="#wed" data-role="button">Wednesday</a>
-                <a href="#thurs" data-role="button">Thursday</a>
-            </div><br>
+            
+
+            <form method= "post" action="demoform.php">  
+            <!--  <div data-role="fieldcontain">  -->
+            <label for="text-basic">Code:</label>
+            <input type="text" name="text-basic" id="code" value="1234" disabled >
+
+            <label for="select-choice-0" class="select">Indicator:</label>
+                <select name="select-choice-0" id="select-choice-1">
+                <option value="n1">Indicator 1</option>
+                <option value="n2">Indicator 2</option>
+                <option value="n3">Indicator 3</option>
+                <option value="n4">Indicator 4</option>
+            </select>
+
+
+            <label for="currentValue_">Value:</label>
+            <input type="number" name="currentValue_" id="currentValue" value="">
+            
+            </form>
+
+
 
             <a href="#" data-role="button" data-rel="back">Go Back</a>
 
         </div><!-- /content -->
  
         <div data-role="footer">
-            <h4> 30/May - 01/Jun </h4>
+            <h4> Data Submission App </h4>
         </div><!-- /footer -->
  
     </div><!-- /page -->
@@ -84,131 +98,19 @@
             <input type="text" name="text-basic" id="firstname" value="">
             <label for="text-basic">Surname:</label>
             <input type="text" name="text-basic" id="surname" value="">
-            <label for="text-basic">Department:</label>
+            <label for="text-basic">Location:</label>
             <input type="text" name="text-basic" id="department" value="">
             </form>
 
-            <a href="#save" data-role="button" >Save</a>
+            <a href="#save" data-role="button" id="save" >Save</a>
             <a href="#" data-role="button" data-rel="back">Go Back</a>
         </div><!-- /content -->
  
         <div data-role="footer">
-            <p> 30/May - 01/Jun </p>           
+            <p> Data Submission App </p>           
         </div><!-- /footer --> 
     </div><!-- /page -->
 
-<!--------------------------- -->
-    <div data-role="page" id= "tues">
-        <div data-role="header">
-          <a href="#home" data-role="button"  data-icon="home">Home</a>
-            <h1>Tuesday</h1>
-
-        </div><!-- /header -->
- 
-        <div role="main" class="ui-content">
-
-<table data-role="table" id= "table-column-toggle" data-role="reflow" class="ui-responsive table-stroke">
-<table>
-    <thead>
-    <tr><th>Time</th><th>Activity</th></tr>
-    </thead>
-    <tbody>
-    <tr><td>8:15 - 8:45am</td><td>Coffee/Tea/Juice/Snacks</td> </tr>
-    <tr><td>8:45 - 10:30am</td><td>Intro to POGIL 1</td> </tr>
-    <tr><td>10:30 - 11:00am</td><td>Break</td> </tr>
-    <tr><td>11:00am - 12:40pm</td><td>Intro to POGIL 2</td> </tr>
-    <tr><td>12:45 - 2:00pm</td><td>Lunch - CS Faculty &amp; FIs sit together with Clif to discuss FOSS interest</td> </tr>
-    <tr><td>2:00 - 3:45pm</td><td>Learning Objectives</td> </tr>
-    <tr><td> 4:00 -5:00pm</td><td> - </td> </tr>
-                      
-</tbody>
-</table>
-            <a href="#" data-role="button" data-rel="back">Go Back</a>
-
-        </div><!-- /content -->
- 
-        <div data-role="footer">
-            <h4> 30/May - 01/Jun </h4>
-        </div><!-- /footer -->
- 
-    </div><!-- /page -->
-
-
-<!--------------------------- -->
-    <div data-role="page" id= "wed">
-        <div data-role="header">
-          <a href="#home" data-role="button"  data-icon="home">Home</a>
-            <h1>Wednesday</h1>
-
-        </div><!-- /header -->
- 
-        <div role="main" class="ui-content">
-            <p>Wednesday</p>
-<table data-role="table" id= "table-column-toggle" data-role="reflow" class="ui-responsive table-stroke">
-<table>
-    <thead>
-    <tr><th>Time</th><th>Activity</th></tr>
-    </thead>
-    <tbody>
-    <tr><td>8:15 - 8:45am</td><td>Coffee/Tea/Juice/Snacks</td> </tr>
-    <tr><td>8:45 - 10:30am</td><td>Intro to POGIL 1</td> </tr>
-    <tr><td>10:30 - 11:00am</td><td>Break</td> </tr>
-    <tr><td>11:00am - 12:40pm</td><td>Intro to POGIL 2</td> </tr>
-    <tr><td>12:45 - 2:00pm</td><td>Lunch - CS Faculty &amp; FIs sit together with Clif to discuss FOSS interest</td> </tr>
-    <tr><td>2:00 - 3:45pm</td><td>Learning Objectives</td> </tr>
-    <tr><td> 4:00 -5:00pm</td><td> - </td> </tr>
-                      
-</tbody>
-</table>            
-
-            <a href="#" data-role="button" data-rel="back">Go Back</a>
-
-        </div><!-- /content -->
- 
-        <div data-role="footer">
-            <h4> 30/May - 01/Jun </h4>
-        </div><!-- /footer -->
- 
-    </div><!-- /page -->
-
-
-<!--------------------------- -->
-    <div data-role="page" id= "thurs">
-        <div data-role="header">
-          <a href="#home" data-role="button"  data-icon="home">Home</a>
-            <h1>Thursday</h1>
-
-        </div><!-- /header -->
- 
-        <div role="main" class="ui-content">
-            <p>Thursday</p>
-            
-<table data-role="table" id= "table-column-toggle" data-role="reflow" class="ui-responsive table-stroke">
-<table>
-    <thead>
-    <tr><th>Time</th><th>Activity</th></tr>
-    </thead>
-    <tbody>
-    <tr><td>8:15 - 8:45am</td><td>Coffee/Tea/Juice/Snacks</td> </tr>
-    <tr><td>8:45 - 10:30am</td><td>Intro to POGIL 1</td> </tr>
-    <tr><td>10:30 - 11:00am</td><td>Break</td> </tr>
-    <tr><td>11:00am - 12:40pm</td><td>Intro to POGIL 2</td> </tr>
-    <tr><td>12:45 - 2:00pm</td><td>Lunch - CS Faculty &amp; FIs sit together with Clif to discuss FOSS interest</td> </tr>
-    <tr><td>2:00 - 3:45pm</td><td>Learning Objectives</td> </tr>
-    <tr><td> 4:00 -5:00pm</td><td> - </td> </tr>
-                      
-</tbody>
-</table>
-
-            <a href="#" data-role="button" data-rel="back">Go Back</a>
-
-        </div><!-- /content -->
- 
-        <div data-role="footer">
-            <h4> 30/May - 01/Jun </h4>
-        </div><!-- /footer -->
- 
-    </div><!-- /page -->
 
 
 
@@ -223,13 +125,14 @@
         <div role="main" class="ui-content">
             <p>Scan QR code to indicate attendance at a session.</p>
             
+            <a href="#" data-role="button" id="scan">Scan</a>
 
             <a href="#" data-role="button" data-rel="back">Go Back</a>
 
         </div><!-- /content -->
  
         <div data-role="footer">
-            <h4> 30/May - 01/Jun </h4>
+            <h4> Data Submission App </h4>
         </div><!-- /footer -->
  
     </div><!-- /page -->
@@ -244,19 +147,20 @@
         </div><!-- /header -->
  
         <div role="main" class="ui-content">
-            <h2>Faculty Development Seminar-2017</h2>
-                <p>About this year's faculty development seminar</p>
-            <h2>Facilitator</h2>
-                <p> About Cliff</p>
-            <h2> About the app</h2>
+            <h2>Data Collection App</h2>
+                <p>Just a demo to show how it could work</p>
+
+                <p>Does not save data yet</p>                
+            
                 <p>Hurriedly hacked together</p>
+                <p>Actual shoudl use more color eg blue and red</p>
 
             <a href="#" data-role="button" data-rel="back">Go Back</a>
 
         </div><!-- /content -->
  
         <div data-role="footer">
-            <h4> 30/May - 01/Jun </h4>
+            <h4> Data Submission App </h4>
         </div><!-- /footer -->
  
     </div><!-- /page -->
@@ -266,3 +170,27 @@
 
 </body>
 </html>
+ <script>
+
+    $('#save').click(function(){
+        alert("No saving yet");
+
+    });
+/*
+
+    $('#save').click(function(){
+        
+        if(typeof(Storage)!=="undefined"){
+        localStorage.setItem("surname",$("#surname").val() )
+        localStorage.setItem("firstname",$("#firstname").val() )
+        localStorage.setItem("department",$("#department").val() )
+        alert("Saved locally");
+        }
+        else{
+         alert("Not Saved");   
+        
+        }
+
+    });
+   */ 
+    </script>

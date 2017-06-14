@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.namanquah.facultydevseminar"
+    id          = "com.namanquah.januamahreli"
     versionCode = "10"
     version     = "0.8.0" >
 
 <!-- versionCode is optional and Android only -->
 
-  <name>2017 Faculty Seminar</name>
+  <name>Demo Data Collection</name>
 
   <description>
-      Program for 2017 Faculty Seminar
+      Demo Data Collection App
   </description>
 
   <author href="https://rightclicksystems.org" email="nathan@rightclicksystems.org">
@@ -18,6 +18,6 @@
   </author>
 
    <icon src="icon.png" />
-    <splash src="splash.png" />
+    <splash src="splash.jpg" />
 
 </widget>
